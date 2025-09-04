@@ -20,7 +20,10 @@ pytest -q
 
 #### Example usage:
 ```bash
-python scripts/run_analysis.py --input data/account_comments_mar2025.csv
+python run_analysis.py --input data/account_comments_mar2025.csv
+Daily rows: 33
+Hourly rows: 24
+Analyzed full data set to identify viral posts and wrote output to viral_post_flags.csv
 ```
 
 ## Notes
@@ -31,4 +34,4 @@ python scripts/run_analysis.py --input data/account_comments_mar2025.csv
 
 Modularization/scalability
 - new data loaders (parquet, etc. can be added to `src/account/data_loader.py`)
-- specify account name
+- specify account name and pull from API

@@ -41,6 +41,10 @@ def main(argv=None):
     print("Daily rows:", len(kpis["daily"]))
     print("Hourly rows:", len(kpis["hourly"]))
 
+    engine.detect_early_viral_posts()
+    engine.save_viral_table("viral_post_flags.csv")
+    print('Analyzed full data set to identify viral posts and wrote output to viral_post_flags.csv')
+
 if __name__ == "__main__":
     main()
     
